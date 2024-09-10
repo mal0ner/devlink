@@ -1,18 +1,37 @@
-# SIT313 Assignment 6.1HD: Devlink Marketplace
+# DevLink Marketplace (With Payments)
 
-Cameron Malone 218344989
+![image](https://github.com/user-attachments/assets/d0de5c97-c49d-4c36-9931-cd73ec38eb88)
 
-## References
 
-- Firebase / Firestore Pagination custom hook with react: https://github.com/CSFrequency/react-firebase-hooks/issues/13
-- React Firebase Hooks Library: https://github.com/CSFrequency/react-firebase-hooks
-- Best practices for storing fetched data: https://stackoverflow.com/questions/64377310/common-ways-to-store-fetched-data-for-a-react-app
-- Using Events for passing data up the component tree: https://www.freecodecamp.org/news/pass-data-between-components-in-react/
-- Stripe JS Redirect only if necessary: https://github.com/vercel/next.js/discussions/33846
-- creating a mock paymentIntent for Stripe: https://stripe.com/docs/api/payment_intents/create?lang=node
+Available: https://devlink-marketplace.netlify.app/find/employees
 
-### Fixes
+## Payments
 
-### Libraries or tools
+> [!WARNING]  
+> _PAYMENT BUTTON IS DISABLED!_ Do not enable it.
 
-`react-firebase-hooks`: Simple to use custom hooks for some commonly used firebase patterns within react. source: https://github.com/CSFrequency/react-firebase-hooks
+`Stripe` custom JS stripe paymentIntent server for payment integration. Visible on the <a href="https://github.com/mal0ner/devlink/tree/feat/payment">feat/payment</a> branch but not available on the hosted site as this is a demonstration project only. Payments occur when users want to post a full-time/employment post instead of a simple freelancing option.
+
+## Running the payment server
+
+```sh
+git clone https://github.com/mal0ner/devlink.git
+
+cd devlink && git checkout feat/payment
+
+echo "A_STRIPE_API_KEY=<KEY>" > .env
+
+npm i
+
+npm run dev
+
+# In a separate shell
+
+cd devlink/src/server/
+
+node paymentServer.cjs
+```
+
+After this, filling out the employment form and pressing `Purchase` should bring you to the payments page.
+ 
+
