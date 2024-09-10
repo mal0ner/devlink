@@ -1,4 +1,4 @@
-# Devlink Marketplace
+# DevLink Marketplace
 Single-Page Full-Stack React application. Built as a learning experience.
 
 ![image](https://github.com/user-attachments/assets/5f468f90-cd93-4781-a748-d5c8d3dd9341)
