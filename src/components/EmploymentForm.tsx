@@ -25,7 +25,7 @@ import {
   uploadImageReturnURL,
 } from '@/utils/firebase';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 //coerce allows for string input to be autocast to number
 const formSchema = z
@@ -372,7 +372,9 @@ function EmploymentForm() {
               />
             </div>
 
-            <Button type="submit">Post</Button>
+            <Button asChild>
+              <Link to={'/payment'}>Purchase</Link>
+            </Button>
           </form>
         </Form>
       </div>

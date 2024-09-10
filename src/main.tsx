@@ -19,6 +19,7 @@ import ProfilePage, {
 import PrivacyPage from '@/pages/PrivacyPage';
 import TermsPage from '@/pages/TermsPage';
 import ConductPage from '@/pages/ConductPage';
+import PaymentPage from '@/pages/PaymentPage';
 
 import FreelanceForm from '@/components/FreelanceForm';
 import EmploymentForm from '@/components/EmploymentForm';
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path: 'conduct',
         element: <ConductPage />,
+      },
+      {
+        path: 'payment',
+        element: <PaymentPage />,
       },
     ],
   },
